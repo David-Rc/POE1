@@ -6,11 +6,17 @@
     </head>
     <body>
         <div ng-controller="appCTRL">
-            <div ng-repeat="content in index">
-                <ul ng-repeat='branch in tree'>
-                    <li>branch.groups.id</li>
+                <h1>{{tree.name}}</h1>
+                <ul>
+                    <li ng-repeat="content in tree.groups">
+                        Group {{content.id}}
+                        <ul>
+                            <li ng-repeat="team in content.teams">
+                                {{team}}
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
-            </div> 
         </div>
         <script src="app.js"></script>
     </body>
