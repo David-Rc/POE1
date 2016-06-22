@@ -6,17 +6,8 @@
     </head>
     <body>
         <div ng-controller="appCTRL">
-                <h1>{{tree.name}}</h1>
-                <ul>
-                    <li ng-repeat="content in tree.groups">
-                        Group {{content.id}}
-                        <ul>
-                            <li ng-repeat="team in content.teams">
-                                {{team}}
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <h1>{{competition.name}}</h1>
+            <div groups-list></div>
         </div>
         <script src="app.js"></script>
     </body>

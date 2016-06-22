@@ -12,9 +12,15 @@ app.controller('appCTRL',['$scope', 'appFactory', function appCtrl($scope, appFa
     
     appFactory.recupData('competition.json').success(function(data){
 
-    $scope.tree = data;
-    console.log($scope.tree.name);
+    $scope.competition = data;
 
   });
     
 }])
+
+app.directive('groupsList', function(){
+    return {
+        templateUrl: "list.html"
+    }
+    
+})
